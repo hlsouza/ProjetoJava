@@ -28,13 +28,24 @@ public class AvaliacaoService implements CrudInterface<Avaliacao> {
 	@Override
 	public Optional<Avaliacao> findById(long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return avaliacaoRepository.findById(id);
 	}
 
+	public List<Avaliacao> findAvaliacaoByProfessorAndDisciplina(String professor, String disciplina) {
+		return avaliacaoRepository.findAvaliacaoByProfessorAndDisciplina(professor, disciplina);
+	}
+	
+	public List<Avaliacao> findAvaliacaoByProfessor(String professor) {
+		return avaliacaoRepository.findAvaliacaoByProfessor(professor);
+	}
+	
+	public List<Avaliacao> findAvaliacaoByDisciplina(String disciplina) {
+		return avaliacaoRepository.findAvaliacaoByDisciplina(disciplina);
+	}
+	
 	@Override
 	public void delete(Avaliacao entity) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
